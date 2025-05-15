@@ -4,7 +4,7 @@ Diversity is a modloader I'm working on for Logiscool. The source-code is not pu
 # What's logiscool??
 Just look it up bro
 
-# Progres???
+# Progress???
 Eeeeh, some I guess <br>
 For anyone who actually uses the platform, so far I've managed (as a test to see if the addon works) to get more than the usual amount (around 5) of cookies to spawn, which works <br> <br>
 Tho I really don't need the cookies :P <br>
