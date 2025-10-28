@@ -1,6 +1,8 @@
 class DiversityBackend {
     static registry = {};
     static broadcastMethod = null;
+    static initing = false;
+    static inited = false;
 
     static registerEvent(eventName, handler) {
         this.registry[eventName] = handler;
@@ -52,6 +54,12 @@ class DiversityBackend {
 
         if (eventName === "!register") {
             return this._handleDynamicRegistration(data);
+        } else if (eventName == "initStageOne" && !this.initing) {
+            this.initStageOne();
+            return true;
+        } else if (eventName == "initStageTwo" && this.initing) {
+            this.initStageTwo();
+            return true;
         }
 
         const handler = this.registry[eventName];
@@ -89,5 +97,20 @@ class DiversityBackend {
 
         const count = Object.keys(this.registry).length;
         Logger.log(`Registered ${count} event${count !== 1 ? "s" : ""}.`);
+    }
+
+    static initStageOne() {
+        Logger.log("Initialization stage one... (resetting values)");
+        this.registry = {};
+        this.broadcastMethod = null;
+        this.inited = false;
+        this.initing = true;
+    }
+
+    static initStageTwo() {
+        Logger.log("Initialization stage two... (setting values)");
+        this.initing = false;
+        this.inited = true;
+        this.registerDefaults();
     }
 }
