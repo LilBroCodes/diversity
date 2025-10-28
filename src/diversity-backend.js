@@ -11,12 +11,13 @@ class DiversityBackend {
         try {
             // Expect format: "eventName=name;handler=()=>{ ... }"
             const parts = Object.fromEntries(
-                data.split(";").map(pair => {
+                data.split("::").map(pair => {
                     const [key, ...rest] = pair.split("=");
                     return [key.trim(), rest.join("=").trim()];
                 })
             );
 
+            Logger.log(Object.entries(parts));
             const { eventName, handler } = parts;
 
             if (!eventName || !handler) {
