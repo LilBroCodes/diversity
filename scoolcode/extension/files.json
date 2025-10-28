@@ -1,0 +1,11 @@
+{
+  "urls": [
+    "*://scoolcode.com/*"
+  ],
+  "files": [
+    {
+      "name": "inject.js",
+      "regex": "main\\..{8}\\.js"
+    }
+  ]
+}

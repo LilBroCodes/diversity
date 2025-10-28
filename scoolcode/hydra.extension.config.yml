@@ -1,0 +1,12 @@
+name: Diversity SCC Loader
+version: '0.1'
+
+urls:
+  - '*://scoolcode.com/*'
+
+files:
+  - name: inject.js
+    regex: 'main\..{8}\.js'
+    source: out/main.js
+
+output_folder: extension

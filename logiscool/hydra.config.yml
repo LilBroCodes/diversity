@@ -1,0 +1,15 @@
+fail_on_error: false
+output_folder: out
+
+webpack:
+  bundle: static/main.bundle.js
+  sourcemap: static/main.bundle.js.map
+
+libs:
+  - diversity-lsc.js
+  - ../src/diversity-common.js
+  - ../src/diversity-globals.js
+  - ../src/diversity-logger.js
+
+mixins:
+  - mixins/**/mixin.yml

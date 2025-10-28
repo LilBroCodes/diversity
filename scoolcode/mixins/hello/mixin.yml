@@ -1,0 +1,10 @@
+target: api/Api.ts
+code_file: mixins/hello/mixin.js
+
+injections:
+  - where: HEAD
+    source_method: getInstance
+    code_method: run
+    offset:
+      row: 0
+      col: -300
