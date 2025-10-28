@@ -2,11 +2,11 @@ name: Diversity LSC Loader
 version: '0.1'
 
 urls:
-  - '*://my.logiscool.com/*'
+  - '*://play.scoolcode.com/*'
 
 files:
   - name: inject.js
-    regex: 'main\..{8}\.chunk\.js'
-    source: generated/main.bundle.js
+    regex: '2\..{8}\.chunk\.js'
+    source: out/main.bundle.js
 
 output_folder: extension

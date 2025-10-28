@@ -6,11 +6,11 @@ webpack:
   sourcemap: static/main.js.map
 
 libs:
-  - diversity-scc.js
   - ../src/diversity-common.js
   - ../src/diversity-globals.js
   - ../src/diversity-logger.js
   - ../src/diversity-networking.js
+  - ../src/diversity-backend.js
 
 mixins:
   - mixins/**/mixin.yml

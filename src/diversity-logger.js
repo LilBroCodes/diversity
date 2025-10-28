@@ -1,25 +1,33 @@
 class Logger {
+    static registerEvents() {
+        DiversityBackend.registerEvent("debug", this.debug);
+        DiversityBackend.registerEvent("info", this.info);
+        DiversityBackend.registerEvent("log", this.log);
+        DiversityBackend.registerEvent("warn", this.warn);
+        DiversityBackend.registerEvent("error", this.error);
+    }
+
     static format(s) {
         return `[Diversity ${DiversityGlobals.getVersion()}] ${s}`;
     }
 
     static log(s) {
-        console.log(this.format(s));
+        console.log(Logger.format(s));
     }
 
     static info(s) {
-        console.info(this.format(s));
+        console.info(Logger.format(s));
     }
 
     static warn(s) {
-        console.warn(this.format(s));
+        console.warn(Logger.format(s));
     }
 
     static debug(s) {
-        console.debug(this.format(s));
+        console.debug(Logger.format(s));
     }
 
     static error(s) {
-        console.error(this.format(s));
+        console.error(Logger.format(s));
     }
 }
