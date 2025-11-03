@@ -1,11 +1,11 @@
 {
   "urls": [
-    "*://play.scoolcode.com/*"
+    "*://my.logiscool.com/*"
   ],
   "files": [
     {
       "name": "inject.js",
-      "regex": "2\\..{8}\\.chunk\\.js"
+      "regex": "\\/2\\..{8}\\.chunk\\.js"
     }
   ]
 }
